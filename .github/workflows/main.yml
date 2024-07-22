@@ -10,11 +10,4 @@ jobs:
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-      with:
-        server: ftp.samkirkland.com
-        username: myFtpUserName
-        password: ${{ secrets.password }}
-        protocol: ftps
-        port: 1234
-        local-dir: ./path/to/your/html/files # Replace with the actual path to your HTML files
-        server-dir: /path/on/ftp/server # Replace with the actual path on your FTP server
+  
