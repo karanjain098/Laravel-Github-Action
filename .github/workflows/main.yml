@@ -17,13 +17,18 @@ jobs:
 
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
-        
+        env:
+       
+          REMOTE_HOST: '3.93.186.29'
+          REMOTE_USER: 'ubuntu'
+          TARGET: home
+
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
+          host: '3.93.186.29'
+          username: 'ubuntu'
+
           script: |
             sudo apt-get -y update
             sudo apt-get install -y apache2
