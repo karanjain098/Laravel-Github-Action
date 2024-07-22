@@ -18,7 +18,7 @@ jobs:
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
-       
+          SSH_PRIVATE_KEY: asdfasfdf
           REMOTE_HOST: '3.93.186.29'
           REMOTE_USER: 'ubuntu'
           TARGET: home
@@ -28,7 +28,7 @@ jobs:
         with:
           host: '3.93.186.29'
           username: 'ubuntu'
-
+          key:  asdfasfdf
           script: |
             sudo apt-get -y update
             sudo apt-get install -y apache2
